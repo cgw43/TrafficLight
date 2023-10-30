@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Traffic Light Simulator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <div class="row">
+                        <h1>Traffic Light Simulator </h1>
+                    </div>
+                <button type="button"  class="btn btn-dark" id="start">Start Simulation</button>
+                <button type="button" class="btn btn-dark" id="stop">Stop Simulation</button>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="stoplight" class="text.white">Green/Red Light Duration (seconds)</label>
+                        <input type="text" class="form-control" id="stoplight" >
+                        <label for="slowlight">Yellow Light Duration (seconds)</label>
+                        <input type="text" class="form-control" id="slowlight" >
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nsped" class="ped">North/South Pedestrian Signal</label>
+                        <img id="nsped" class="pedimg" src="/img/stop.jpg" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="ewped" class="ped">East/West Pedestrian Signal</label>
+                        <img id="ewped" class="pedimg" src="/img/stop.jpg" />
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-2">
+                        <label for="north" class="lightlabel">North</label>
+                        <div class="light" id="north">
+                            <div class="circle stop n" color="stop"></div>
+                            <div class="circle n" color="slow"></div>
+                            <div class="circle n" color="go"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <label for="south" class="lightlabel">South</label>
+                        <div class="light" id="south">
+                            <div class="circle stop s" color="stop"></div>
+                            <div class="circle s" color="slow"></div>
+                            <div class="circle s" color="go"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-2">
+                        <label for="east" class="lightlabel">East</label>
+                        <div class="light" id="east">
+                            <div class="circle stop e" color="stop"></div>
+                            <div class="circle e" color="slow"></div>
+                            <div class="circle e" color="go"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <label for="west" class="lightlabel">West</label>
+                        <div class="light" id="west">
+                            <div class="circle stop w" color="stop"></div>
+                            <div class="circle w" color="slow"></div>
+                            <div class="circle w" color="go"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
